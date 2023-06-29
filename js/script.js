@@ -1,30 +1,32 @@
 const customerNameInput = document.querySelector(".customer-name-input");
 const amountTakenInput = document.querySelector(".amount-taken-input");
 const addButton = document.querySelector(".add-button");
-const customerCards = document.getElementsByClassName("customer-details-conatiner")[0];
+const customerCards = document.getElementsByClassName(
+  "customer-details-conatiner"
+)[0];
 
 const customerDetails = [];
 
 function updatingBox(i) {
-    document
-      .getElementsByClassName("edit-amount")
-      [i].addEventListener("keyup", (e) => {
-        if (e.key === "Enter") {
-          let res =
-            Number(customerDetails[i].totalDues) +
-            Number(document.getElementsByClassName("edit-amount")[i].value);
-          customerDetails[i].totalDues = res;
-          showList();
-        }
-      });
-  }
+  document
+    .getElementsByClassName("edit-amount")
+    [i].addEventListener("keyup", (e) => {
+      if (e.key === "Enter") {
+        let res =
+          Number(customerDetails[i].totalDues) +
+          Number(document.getElementsByClassName("edit-amount")[i].value);
+        customerDetails[i].totalDues = res;
+        showList();
+      }
+    });
+}
 
 function editButton(i) {
-    document
-      .getElementsByClassName("edit-amount")
-      [i].classList.toggle("hidden-item");
-    updatingBox(i);
-  }
+  document
+    .getElementsByClassName("edit-amount")
+    [i].classList.toggle("hidden-item");
+  updatingBox(i);
+}
 
 function showList() {
   customerCards.innerHTML = " ";
@@ -55,16 +57,14 @@ function getDetails() {
   amountTakenInput.value = "";
 }
 
-
-
-
-
 amountTakenInput.addEventListener("keyup", (e) => {
   if (e.key === "Enter") {
+    customerCards.classList.remove("hidden-block");
     getDetails();
   }
 });
 
 addButton.addEventListener("click", () => {
+  customerCards.classList.remove("hidden-block");
   getDetails();
 });

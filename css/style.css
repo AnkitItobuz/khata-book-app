@@ -1,56 +1,66 @@
 body {
-    background-color: #edede9;
+  background-color: #edede9;
 }
 
 h1 {
-    color: #52796f;
+  color: #52796f;
 }
 .input-field input {
-    background-color: #f5ebe0;
+  background-color: #f5ebe0;
 }
 
 .khataBook-container {
-    width: 100vw;
+  width: 100vw;
 }
 .input-field button {
-    background-color: #84a98c;
+  background-color: #84a98c;
 }
 
 .input-field input:focus {
-    outline: none;
+  outline: none;
 }
 
 .customer-details-conatiner {
-    width: 100%;
-    background-color: #84a98c;
+  width: 100%;
+  background-color: #84a98c;
+}
+
+.hidden-block {
+  display: none !important;
 }
 
 .customer-name {
-    max-width: 8rem;
-    overflow: auto;
+  max-width: 8rem;
+  overflow: auto;
 }
 
 section {
-    background-color: #cad2c5;
+  background-color: #cad2c5;
 }
 
 .edit-button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .edit-amount {
-    width: 4rem;
-    background-color: #f5ebe0;
+  width: 4rem;
+  background-color: #f5ebe0;
 }
 .hidden-item {
-    display: none;
+  display: none;
 }
 
-@media (min-width: 768px){
-    .khataBook-container {
-        width: 60%;
-    }
-    .customer-details-conatiner {
-        width: 33vw;
-    }
+@media (min-width: 768px) {
+  .khataBook-container {
+    width: 60%;
+  }
+  .customer-details-conatiner {
+    width: 33vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  .khataBook-container {
+    width: 40%;
+  }
 }
