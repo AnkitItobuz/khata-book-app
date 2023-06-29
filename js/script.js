@@ -22,9 +22,7 @@ function updatingBox(i) {
 }
 
 function editButton(i) {
-  document
-    .getElementsByClassName("edit-amount")
-    [i].classList.toggle("hidden-item");
+  document.getElementsByClassName("edit-amount")[i].classList.toggle("hidden-item");
   updatingBox(i);
 }
 
