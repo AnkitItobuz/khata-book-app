@@ -46,6 +46,8 @@ function getDetails() {
   };
 
   if (customerNameInput.value.trim() !== "" && amountTakenInput.value !== "") {
+  customerCards.classList.remove("hidden-block");
+
     customerDetails.push(content);
   } else {
     alert("Empty task");
@@ -57,12 +59,10 @@ function getDetails() {
 
 amountTakenInput.addEventListener("keyup", (e) => {
   if (e.key === "Enter") {
-    customerCards.classList.remove("hidden-block");
     getDetails();
   }
 });
 
 addButton.addEventListener("click", () => {
-  customerCards.classList.remove("hidden-block");
   getDetails();
 });
